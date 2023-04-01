@@ -87,7 +87,7 @@ namespace WpfAppWther
         {
             if (model.AllWeatherAP.visCross != null)
                 return model.AllWeatherAP.visCross.address;
-            return "Локация не найдена";
+            return model.AllWeatherAP.visCross.NonInformationAboutLocation;
         }
         public double? ReturnTempVissCrossWeather() 
         {
@@ -99,7 +99,7 @@ namespace WpfAppWther
         {
             if (model.AllWeatherAP.visCross != null)
                 return model.AllWeatherAP.visCross.address;
-            return "Локация не найдена";
+            return model.AllWeatherAP.visCross.NonInformationAboutLocation;
         }
         public double? ReturnTempWeatherApi()
         {
@@ -111,7 +111,7 @@ namespace WpfAppWther
         {
             if (model.AllWeatherAP.weatherapi != null)
                 return model.AllWeatherAP.weatherapi.location.name;
-            return "Локация не найдена";
+            return model.AllWeatherAP.weatherapi.NonInformationAboutLocation;
         }
         public double? ReturnTempWeatherStack() 
         {
@@ -125,7 +125,7 @@ namespace WpfAppWther
             if (model.AllWeatherAP.weatherstack != null)
                 if (model.AllWeatherAP.weatherstack.Location != null)
                 return model.AllWeatherAP.weatherstack.Location.name;
-            return "Локация не найдена";
+            return model.AllWeatherAP.weatherstack.NonInformationAboutLocation;
         }
 
         public double ReturnAverageTemp() // подсчет средней температуры

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WpfAppWther
 {
-    public class Weatherstack
+    public class Weatherstack : AllWeatherAPI
     {
         public Locations? Location { get; set; }
         public Currents? Current { get; set; }

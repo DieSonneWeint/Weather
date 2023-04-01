@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WpfAppWther
 {
-    public class OpenWeather
+    public class OpenWeather : AllWeatherAPI
     {
         public Main? main { get; set; }
         public string? name { get; set; }

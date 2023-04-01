@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WpfAppWther
 {
-    public class VisCrossWeather
+    public class VisCrossWeather : AllWeatherAPI
     {
         public string? address { get; set; }
         public Day[]? days { get; set; }  
