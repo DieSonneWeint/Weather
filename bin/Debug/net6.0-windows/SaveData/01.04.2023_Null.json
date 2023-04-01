@@ -1,0 +1,13 @@
+{
+  "openWeather": null,
+  "weatherstack": null,
+  "weatherapi": null,
+  "visCross": null
+}"name": "Хавант"
+    },
+    "current": {
+      "temp_c": 10
+    }
+  },
+  "visCross": null
+}

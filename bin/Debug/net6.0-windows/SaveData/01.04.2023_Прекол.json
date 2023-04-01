@@ -1,0 +1,20 @@
+{
+  "openWeather": null,
+  "weatherstack": null,
+  "weatherapi": {
+    "location": {
+      "name": "Ховы"
+    },
+    "current": {
+      "temp_c": 26.9
+    }
+  },
+  "visCross": {
+    "address": "Прекол",
+    "days": [
+      {
+        "temp": 7.1
+      }
+    ]
+  }
+}

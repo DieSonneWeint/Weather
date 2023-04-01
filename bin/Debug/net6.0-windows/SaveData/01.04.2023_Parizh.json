@@ -1,0 +1,32 @@
+{
+  "openWeather": {
+    "main": {
+      "temp": 1.18
+    },
+    "name": "Parizh"
+  },
+  "weatherstack": {
+    "Location": {
+      "name": "Parizh"
+    },
+    "Current": {
+      "temperature": 6
+    }
+  },
+  "weatherapi": {
+    "location": {
+      "name": "Parizh"
+    },
+    "current": {
+      "temp_c": 5.7
+    }
+  },
+  "visCross": {
+    "address": "Parizh",
+    "days": [
+      {
+        "temp": 10.8
+      }
+    ]
+  }
+}

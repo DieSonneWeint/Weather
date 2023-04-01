@@ -1,0 +1,115 @@
+{
+  "openWeather": {
+    "main": {
+      "temp": -3.39
+    },
+    "name": "Novosibirsk"
+  },
+  "weatherstack": {
+    "Location": {
+      "name": "Новосибирск"
+    },
+    "Current": {
+      "temperature": -3
+    }
+  },
+  "weatherapi": {
+    "location": {
+      "name": "Новосибирск"
+    },
+    "current": {
+      "temp_c": -3
+    }
+  },
+  "visCross": {
+    "address": "Новосибирск",
+    "days": [
+      {
+        "temp": -8.7
+      }
+    ]
+  }
+}": "City",
+      "query": "Новосибирск, Россия",
+      "language": "en",
+      "unit": "m"
+    },
+    "Location": {
+      "name": "Новосибирск",
+      "country": "Россия",
+      "region": "Novosibirsk",
+      "timezone_id": "Asia/Novosibirsk",
+      "localtime": "2023-04-01 15:32",
+      "localtime_epoch": 1680363120,
+      "utc_offset": "7.0"
+    },
+    "Current": {
+      "temperature": -4
+    },
+    "Forecast": null
+  },
+  "weatherapi": {
+    "location": {
+      "name": "Новосибирск",
+      "region": "Novosibirsk",
+      "country": "Россия",
+      "lat": 55.04,
+      "lon": 82.93,
+      "tz_id": "Asia/Novosibirsk",
+      "localtime_epoch": 1680337934,
+      "localtime": "2023-04-01 15:32"
+    },
+    "current": {
+      "last_updated_epoch": 1680337800,
+      "last_updated": "2023-04-01 15:30",
+      "temp_c": -4
+    }
+  },
+  "visCross": {
+    "queryCost": 1,
+    "latitude": 55.0398,
+    "longitude": 82.9102,
+    "resolvedAddress": "Новосибирск, Сибирский федеральный округ, Россия",
+    "address": "Новосибирск",
+    "timezone": "Asia/Novosibirsk",
+    "tzoffset": 7,
+    "description": "Similar temperatures continuing with no rain expected.",
+    "days": [
+      {
+        "datetime": "2023-04-01",
+        "datetimeEpoch": 1680282000,
+        "tempmax": -5,
+        "tempmin": -14,
+        "temp": -8.8,
+        "feelslikemax": -8,
+        "feelslikemin": -18.8,
+        "feelslike": -12.4,
+        "datetimeInstance": "0001-01-01T00:00:00"
+      }
+    ],
+    "alerts": [],
+    "currentConditions": {
+      "datetime": "15:00:00",
+      "datetimeEpoch": 1680336000,
+      "temp": -4,
+      "feelslike": -9.3,
+      "humidity": 53.8
+    }
+  }
+}
+        "feelslikemax": -8,
+        "feelslikemin": -18.8,
+        "feelslike": -12.4,
+        "datetimeInstance": "0001-01-01T00:00:00"
+      }
+    ],
+    "alerts": [],
+    "currentConditions": {
+      "datetime": "15:00:00",
+      "datetimeEpoch": 1680336000,
+      "temp": -4,
+      "feelslike": -9.3,
+      "humidity": 53.8
+    }
+  }
+}

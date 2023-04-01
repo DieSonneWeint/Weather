@@ -1,0 +1,68 @@
+{
+  "openWeather": {
+    "main": {
+      "temp": 8.89
+    },
+    "name": "Chechnya"
+  },
+  "weatherstack": {
+    "Location": null,
+    "Current": null
+  },
+  "weatherapi": null,
+  "visCross": {
+    "address": "Чечня",
+    "days": [
+      {
+        "temp": 16
+      }
+    ]
+  }
+}e": 1017,
+      "humidity": 65,
+      "sea_level": 0,
+      "grnd_level": 0
+    },
+    "id": 569665,
+    "name": "Chechnya",
+    "cod": 200
+  },
+  "weatherstack": {
+    "Request": null,
+    "Location": null,
+    "Current": null,
+    "Forecast": null
+  },
+  "weatherapi": null,
+  "visCross": {
+    "queryCost": 1,
+    "latitude": 8.99911,
+    "longitude": 38.7781,
+    "resolvedAddress": "Chichnya, Wereda 15, Ethiopia",
+    "address": "Чечня",
+    "timezone": "Africa/Addis_Ababa",
+    "tzoffset": 3,
+    "description": "Similar temperatures continuing with no rain expected.",
+    "days": [
+      {
+        "datetime": "2023-04-01",
+        "datetimeEpoch": 1680296400,
+        "tempmax": 20.1,
+        "tempmin": 13,
+        "temp": 15.7,
+        "feelslikemax": 20.1,
+        "feelslikemin": 13,
+        "feelslike": 15.7,
+        "datetimeInstance": "0001-01-01T00:00:00"
+      }
+    ],
+    "alerts": [],
+    "currentConditions": {
+      "datetime": "11:00:00",
+      "datetimeEpoch": 1680336000,
+      "temp": 19,
+      "feelslike": 19,
+      "humidity": 59.8
+    }
+  }
+}

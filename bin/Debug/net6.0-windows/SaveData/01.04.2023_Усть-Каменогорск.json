@@ -1,0 +1,98 @@
+{
+  "openWeather": {
+    "main": {
+      "temp": -0.04
+    },
+    "name": "Ust-Kamenogorsk"
+  },
+  "weatherstack": {
+    "Location": {
+      "name": "Усть-Каменогорск"
+    },
+    "Current": {
+      "temperature": 0
+    }
+  },
+  "weatherapi": {
+    "location": {
+      "name": "Усть-Каменогорск"
+    },
+    "current": {
+      "temp_c": 0
+    }
+  },
+  "visCross": {
+    "address": "Усть-Каменогорск",
+    "days": [
+      {
+        "temp": -4.6
+      }
+    ]
+  }
+}: "Усть-Каменогорск, Казахстан",
+      "language": "en",
+      "unit": "m"
+    },
+    "Location": {
+      "name": "Усть-Каменогорск",
+      "country": "Казахстан",
+      "region": "East Kazakhstan",
+      "timezone_id": "Asia/Almaty",
+      "localtime": "2023-04-01 14:50",
+      "localtime_epoch": 1680360600,
+      "utc_offset": "6.0"
+    },
+    "Current": {
+      "temperature": 0
+    },
+    "Forecast": null
+  },
+  "weatherapi": {
+    "location": {
+      "name": "Усть-Каменогорск",
+      "region": "East Kazakhstan",
+      "country": "Казахстан",
+      "lat": 49.98,
+      "lon": 82.61,
+      "tz_id": "Asia/Almaty",
+      "localtime_epoch": 1680339008,
+      "localtime": "2023-04-01 14:50"
+    },
+    "current": {
+      "last_updated_epoch": 1680338700,
+      "last_updated": "2023-04-01 14:45",
+      "temp_c": 0
+    }
+  },
+  "visCross": {
+    "queryCost": 1,
+    "latitude": 49.9624,
+    "longitude": 82.6187,
+    "resolvedAddress": "Өскемен, Қазақстан",
+    "address": "Усть-Каменогорск",
+    "timezone": "Asia/Almaty",
+    "tzoffset": 6,
+    "description": "Similar temperatures continuing with no rain expected.",
+    "days": [
+      {
+        "datetime": "2023-04-01",
+        "datetimeEpoch": 1680285600,
+        "tempmax": 0,
+        "tempmin": -9,
+        "temp": -4.6,
+        "feelslikemax": -5.1,
+        "feelslikemin": -16.9,
+        "feelslike": -11.1,
+        "datetimeInstance": "0001-01-01T00:00:00"
+      }
+    ],
+    "alerts": [],
+    "currentConditions": {
+      "datetime": "14:00:00",
+      "datetimeEpoch": 1680336000,
+      "temp": 0,
+      "feelslike": -7.4,
+      "humidity": 43.3
+    }
+  }
+}

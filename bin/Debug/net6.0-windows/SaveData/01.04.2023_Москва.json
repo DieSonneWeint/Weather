@@ -1,0 +1,32 @@
+{
+  "openWeather": {
+    "main": {
+      "temp": 7.57
+    },
+    "name": "Moscow"
+  },
+  "weatherstack": {
+    "Location": {
+      "name": "Москва"
+    },
+    "Current": {
+      "temperature": 7
+    }
+  },
+  "weatherapi": {
+    "location": {
+      "name": "Москва"
+    },
+    "current": {
+      "temp_c": 7
+    }
+  },
+  "visCross": {
+    "address": "Москва",
+    "days": [
+      {
+        "temp": 3.7
+      }
+    ]
+  }
+}

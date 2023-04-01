@@ -1,0 +1,32 @@
+{
+  "openWeather": {
+    "main": {
+      "temp": 8.4
+    },
+    "name": "Рука"
+  },
+  "weatherstack": {
+    "Location": {
+      "name": "Рукав Моря"
+    },
+    "Current": {
+      "temperature": 13
+    }
+  },
+  "weatherapi": {
+    "location": {
+      "name": "Рукав Моря"
+    },
+    "current": {
+      "temp_c": 13.3
+    }
+  },
+  "visCross": {
+    "address": "ваываы",
+    "days": [
+      {
+        "temp": 7.9
+      }
+    ]
+  }
+}

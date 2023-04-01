@@ -1,0 +1,94 @@
+{
+  "openWeather": {
+    "weather": [
+      {
+        "id": 800,
+        "main": "Clear",
+        "description": "clear sky"
+      }
+    ],
+    "_base": null,
+    "main": {
+      "temp": 11.97,
+      "feels_like": 9.74,
+      "temp_min": 11.97,
+      "temp_max": 11.97,
+      "pressure": 1028,
+      "humidity": 20,
+      "sea_level": 1028,
+      "grnd_level": 982
+    },
+    "id": 1522867,
+    "name": "Kazakhstan",
+    "cod": 200
+  },
+  "weatherstack": {
+    "Request": {
+      "type": "City",
+      "query": "Казахстан, Казахстан",
+      "language": "en",
+      "unit": "m"
+    },
+    "Location": {
+      "name": "Казахстан",
+      "country": "Казахстан",
+      "region": "Pavlodar",
+      "timezone_id": "Asia/Almaty",
+      "localtime": "2023-04-01 14:49",
+      "localtime_epoch": 1680360540,
+      "utc_offset": "6.0"
+    },
+    "Current": {
+      "temperature": 1
+    },
+    "Forecast": null
+  },
+  "weatherapi": {
+    "location": {
+      "name": "Казахстан",
+      "region": "Pavlodar",
+      "country": "Казахстан",
+      "lat": 51.3,
+      "lon": 77.75,
+      "tz_id": "Asia/Almaty",
+      "localtime_epoch": 1680338966,
+      "localtime": "2023-04-01 14:49"
+    },
+    "current": {
+      "last_updated_epoch": 1680338700,
+      "last_updated": "2023-04-01 14:45",
+      "temp_c": 1.4
+    }
+  },
+  "visCross": {
+    "queryCost": 1,
+    "latitude": 51.1277,
+    "longitude": 71.4283,
+    "resolvedAddress": "Қазақстан",
+    "address": "Казахстан",
+    "timezone": "Asia/Almaty",
+    "tzoffset": 6,
+    "description": "Similar temperatures continuing with no rain expected.",
+    "days": [
+      {
+        "datetime": "2023-04-01",
+        "datetimeEpoch": 1680285600,
+        "tempmax": 5.2,
+        "tempmin": -9,
+        "temp": -1.1,
+        "feelslikemax": 0.8,
+        "feelslikemin": -15.4,
+        "feelslike": -6.5,
+        "datetimeInstance": "0001-01-01T00:00:00"
+      }
+    ],
+    "alerts": [],
+    "currentConditions": {
+      "datetime": "14:00:00",
+      "datetimeEpoch": 1680336000,
+      "temp": 5,
+      "feelslike": 0.1,
+      "humidity": 30.4
+    }
+  }
+}
