@@ -41,7 +41,8 @@ namespace WpfAppWther
             HttpResponseMessage httpResponseMessage2 = await client.GetAsync(URI2);
             HttpResponseMessage httpResponseMessage3 = await client.GetAsync(URI3);
             HttpResponseMessage httpResponseMessage4 = await client.GetAsync(URI4);
-            if (httpResponseMessage.IsSuccessStatusCode) { 
+            if (httpResponseMessage.IsSuccessStatusCode) 
+            { 
             model.AllWeatherAP.openWeather = await httpResponseMessage.Content.ReadFromJsonAsync<OpenWeather>();
             }   
             if (httpResponseMessage2.IsSuccessStatusCode)
@@ -54,7 +55,7 @@ namespace WpfAppWther
                 model.AllWeatherAP.weatherapi = await httpResponseMessage3.Content.ReadFromJsonAsync<WeatherApi>();
             }
 
-            if (httpResponseMessage.IsSuccessStatusCode)
+            if (httpResponseMessage4.IsSuccessStatusCode)
             {
                 model.AllWeatherAP.weatherstack = await httpResponseMessage4.Content.ReadFromJsonAsync<Weatherstack>();
             }                         
@@ -77,83 +78,85 @@ namespace WpfAppWther
             FileStream file= new FileStream(FileName,FileMode.OpenOrCreate);
             model.SaveWeatherData(file);
         }
-        public double? ReturnTempOpenWeather() 
+        public string? ReturnTempOpenWeather() 
         {
             if (model.AllWeatherAP.openWeather != null)
-             return  model.AllWeatherAP.openWeather.main.temp;
-            return null;
+             return $"{Math.Round(Convert.ToDouble(model.AllWeatherAP.openWeather.main.temp),2)}";
+            return "-";
         }
         public string? ReturnCityNameOpenWeather() 
         {
             if (model.AllWeatherAP.visCross != null)
                 return model.AllWeatherAP.visCross.address;
-            return model.AllWeatherAP.visCross.NonInformationAboutLocation;
+            return model.AllWeatherAP.NonInformationAboutLocation;
         }
-        public double? ReturnTempVissCrossWeather() 
+        public string? ReturnTempVissCrossWeather() 
         {
             if (model.AllWeatherAP.visCross != null)
-                return model.AllWeatherAP.visCross.days[0].temp;
-            return null;
+                return $"{Math.Round(Convert.ToDouble(model.AllWeatherAP.visCross.days[0].temp),2)}";
+            return "-";
         }
         public string? ReturnCityNameVissCross() 
         {
             if (model.AllWeatherAP.visCross != null)
                 return model.AllWeatherAP.visCross.address;
-            return model.AllWeatherAP.visCross.NonInformationAboutLocation;
+            return model.AllWeatherAP.NonInformationAboutLocation;
         }
-        public double? ReturnTempWeatherApi()
+        public string? ReturnTempWeatherApi()
         {
             if (model.AllWeatherAP.weatherapi != null)
-                return model.AllWeatherAP.weatherapi.current.temp_c;
-            return null;
+                return $"{Math.Round(Convert.ToDouble(model.AllWeatherAP.weatherapi.current.temp_c),2)}";
+            return "-";
         }
         public string? ReturnCityNameWeatherApi() 
         {
             if (model.AllWeatherAP.weatherapi != null)
                 return model.AllWeatherAP.weatherapi.location.name;
-            return model.AllWeatherAP.weatherapi.NonInformationAboutLocation;
+            return model.AllWeatherAP.NonInformationAboutLocation;
         }
-        public double? ReturnTempWeatherStack() 
+        public string? ReturnTempWeatherStack() 
         {
             if (model.AllWeatherAP.weatherstack != null)
                 if(model.AllWeatherAP.weatherstack.Current != null)
-                return model.AllWeatherAP.weatherstack.Current.temperature;
-            return null;
+                return $"{Math.Round(Convert.ToDouble(model.AllWeatherAP.weatherstack.Current.temperature),2)}";
+            return "-";
         }
         public string? ReturnCityNameWeatherStack() 
         {
             if (model.AllWeatherAP.weatherstack != null)
                 if (model.AllWeatherAP.weatherstack.Location != null)
                 return model.AllWeatherAP.weatherstack.Location.name;
-            return model.AllWeatherAP.weatherstack.NonInformationAboutLocation;
+            return model.AllWeatherAP.NonInformationAboutLocation;
         }
 
-        public double ReturnAverageTemp() // подсчет средней температуры
+        public string ReturnAverageTemp() // подсчет средней температуры
         {
             int del = 0;
-            double? result = 0;
-            if (ReturnTempVissCrossWeather() != null)
+            double? result = null;
+            if (ReturnTempVissCrossWeather() != "-")
             {
                 del++;
-                result += ReturnTempVissCrossWeather();
+                result += Convert.ToDouble(ReturnTempVissCrossWeather());
             }
 
-            if (ReturnTempWeatherApi() != null)
+            if (ReturnTempWeatherApi() != "-")
             {
                 del++;
-                result += ReturnTempWeatherApi();
+                result += Convert.ToDouble(ReturnTempWeatherApi());
             }
-            if (ReturnTempOpenWeather() != null)
+            if (ReturnTempOpenWeather() != "-")
             {
                 del++;
-                result += ReturnTempOpenWeather();
+                result += Convert.ToDouble(ReturnTempOpenWeather());
             }
-            if (ReturnTempWeatherStack() != null)
+            if (ReturnTempWeatherStack() != "-")
             {
                 del++;
-                result += ReturnTempWeatherStack();
+                result += Convert.ToDouble(ReturnTempWeatherStack());
             }
-            return Convert.ToDouble(result/del);
+            if (result != null)
+            return $"{Math.Round(Convert.ToDouble(result/del),2)}";
+            return "-";
         }
     }
 }

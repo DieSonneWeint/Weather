@@ -77,11 +77,11 @@ namespace WpfAppWther
         }
         private void labelprint()
         {
-            LabelOpenWeat.Content = $"OpenWeath\n{model.ReturnCityNameOpenWeather()}\n{Math.Round(Convert.ToDouble(model.ReturnTempOpenWeather()),2)}  C";
-            LabelWeatherApi.Content = $"WeatherApi\n{model.ReturnCityNameWeatherApi()}\n{Math.Round(Convert.ToDouble(model.ReturnTempWeatherApi()),2)}  C";
-            LabelVisualCros.Content = $"VisualCross\n{model.ReturnCityNameVissCross()}\n{Math.Round(Convert.ToDouble(model.ReturnTempVissCrossWeather()),2)}  C";
-            LabelWeatherStack.Content = $"WeatherStack\n{model.ReturnCityNameWeatherStack()}\n{Math.Round(Convert.ToDouble(model.ReturnTempWeatherStack()),2)}  C";
-            AverageTemp.Content = $"Средняя температура\n{Math.Round(model.ReturnAverageTemp(),2)}  C";
+            LabelOpenWeat.Content = $"OpenWeath\n{model.ReturnCityNameOpenWeather()}\n{model.ReturnTempOpenWeather()}  C";
+            LabelWeatherApi.Content = $"WeatherApi\n{model.ReturnCityNameWeatherApi()}\n{model.ReturnTempWeatherApi()}  C";
+            LabelVisualCros.Content = $"VisualCross\n{model.ReturnCityNameVissCross()}\n{model.ReturnTempVissCrossWeather()}  C";
+            LabelWeatherStack.Content = $"WeatherStack\n{model.ReturnCityNameWeatherStack()}\n{model.ReturnTempWeatherStack()}  C";
+            AverageTemp.Content = $"Средняя температура\n {model.ReturnAverageTemp()} C";
         }
 
         void textBox_PreviewTextInput(object sender, TextCompositionEventArgs e)

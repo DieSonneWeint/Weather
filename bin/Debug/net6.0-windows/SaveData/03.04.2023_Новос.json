@@ -1,0 +1,31 @@
+{
+  "NonInformationAboutLocation": "Локация не найдена",
+  "openWeather": null,
+  "weatherstack": null,
+  "weatherapi": {
+    "location": {
+      "name": "Новосибирск"
+    },
+    "current": {
+      "temp_c": 5
+    },
+    "NonInformationAboutLocation": "Локация не найдена",
+    "openWeather": null,
+    "weatherstack": null,
+    "weatherapi": null,
+    "visCross": null
+  },
+  "visCross": {
+    "address": "Новос",
+    "days": [
+      {
+        "temp": 13.3
+      }
+    ],
+    "NonInformationAboutLocation": "Локация не найдена",
+    "openWeather": null,
+    "weatherstack": null,
+    "weatherapi": null,
+    "visCross": null
+  }
+}

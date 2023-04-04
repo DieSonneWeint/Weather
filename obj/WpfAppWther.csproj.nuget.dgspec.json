@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\User\\Documents\\Weather_APP-main\\Weather_APP-main\\WpfAppWther.csproj": {}
+    "C:\\Users\\drago\\Source\\Repos\\Weather\\WpfAppWther.csproj": {}
   },
   "projects": {
-    "C:\\Users\\User\\Documents\\Weather_APP-main\\Weather_APP-main\\WpfAppWther.csproj": {
+    "C:\\Users\\drago\\Source\\Repos\\Weather\\WpfAppWther.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\Documents\\Weather_APP-main\\Weather_APP-main\\WpfAppWther.csproj",
+        "projectUniqueName": "C:\\Users\\drago\\Source\\Repos\\Weather\\WpfAppWther.csproj",
         "projectName": "WpfAppWther",
-        "projectPath": "C:\\Users\\User\\Documents\\Weather_APP-main\\Weather_APP-main\\WpfAppWther.csproj",
-        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\Documents\\Weather_APP-main\\Weather_APP-main\\obj\\",
+        "projectPath": "C:\\Users\\drago\\Source\\Repos\\Weather\\WpfAppWther.csproj",
+        "packagesPath": "C:\\Users\\drago\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\drago\\Source\\Repos\\Weather\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\drago\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -58,7 +62,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.103\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     }

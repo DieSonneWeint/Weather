@@ -15,4 +15,13 @@
     <Resource Include="Image2.png" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="Image1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Image3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>
