@@ -25,30 +25,3 @@
     "visCross": null
   }
 }
-  "weatherapi": {
-    "location": {
-      "name": "Челябинск"
-    },
-    "current": {
-      "temp_c": 14
-    },
-    "NonInformationAboutLocation": "Локация не найдена",
-    "openWeather": null,
-    "weatherstack": null,
-    "weatherapi": null,
-    "visCross": null
-  },
-  "visCross": {
-    "address": "Челябинск",
-    "days": [
-      {
-        "temp": 6.4
-      }
-    ],
-    "NonInformationAboutLocation": "Локация не найдена",
-    "openWeather": null,
-    "weatherstack": null,
-    "weatherapi": null,
-    "visCross": null
-  }
-}

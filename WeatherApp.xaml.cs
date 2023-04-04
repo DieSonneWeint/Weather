@@ -72,6 +72,7 @@ namespace WpfAppWther
                 labelprint();
                 model.SaveFile("WeatherTemp.json");
                 model.SaveFile($"SaveData\\{System.DateTime.Now.ToShortDateString()}_{model.ReturnCityNameOpenWeather()}.json");
+                TextBoxC.Text = "";
                 Button.IsEnabled = true;
             }
         }

@@ -136,7 +136,7 @@ namespace WpfAppWther
             if (ReturnTempVissCrossWeather() != "-")
             {
                 del++;
-                result += Convert.ToDouble(ReturnTempVissCrossWeather());
+                result = Convert.ToDouble(ReturnTempVissCrossWeather());
             }
 
             if (ReturnTempWeatherApi() != "-")
@@ -155,7 +155,9 @@ namespace WpfAppWther
                 result += Convert.ToDouble(ReturnTempWeatherStack());
             }
             if (result != null)
-            return $"{Math.Round(Convert.ToDouble(result/del),2)}";
+            {
+                return $"{Math.Round(Convert.ToDouble(result / del), 2)}";
+            }
             return "-";
         }
     }
