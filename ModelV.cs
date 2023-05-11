@@ -1,6 +1,10 @@
 ﻿using Microsoft.Win32;
+using OxyPlot.Series;
+using OxyPlot;
+using ScottPlot.Plottable;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Linq.Expressions;
@@ -13,13 +17,20 @@ using System.Text.RegularExpressions;
 using System.Text.Unicode;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
+using OxyPlot.Wpf;
+using OxyPlot.Axes;
+using System.Diagnostics;
+using System.Reflection.Metadata.Ecma335;
 
 namespace WpfAppWther
 {
-    internal class ModelV
+    public class ModelV
     {
-        Model model= new Model(); 
+        Model model = new Model();
         HttpClient client = new HttpClient();
 
         string API = "d3b601a5292fe7374e161205cf54ca0f";
@@ -37,14 +48,14 @@ namespace WpfAppWther
         {
             model = new Model();
             CreateURI(CityName);
-            HttpResponseMessage httpResponseMessage =  await client.GetAsync(URI);
+            HttpResponseMessage httpResponseMessage = await client.GetAsync(URI);
             HttpResponseMessage httpResponseMessage2 = await client.GetAsync(URI2);
             HttpResponseMessage httpResponseMessage3 = await client.GetAsync(URI3);
             HttpResponseMessage httpResponseMessage4 = await client.GetAsync(URI4);
-            if (httpResponseMessage.IsSuccessStatusCode) 
-            { 
-            model.AllWeatherAP.openWeather = await httpResponseMessage.Content.ReadFromJsonAsync<OpenWeather>();
-            }   
+            if (httpResponseMessage.IsSuccessStatusCode)
+            {
+                model.AllWeatherAP.openWeather = await httpResponseMessage.Content.ReadFromJsonAsync<OpenWeather>();
+            }
             if (httpResponseMessage2.IsSuccessStatusCode)
             {
                 model.AllWeatherAP.visCross = await httpResponseMessage2.Content.ReadFromJsonAsync<VisCrossWeather>();
@@ -58,26 +69,74 @@ namespace WpfAppWther
             if (httpResponseMessage4.IsSuccessStatusCode)
             {
                 model.AllWeatherAP.weatherstack = await httpResponseMessage4.Content.ReadFromJsonAsync<Weatherstack>();
-            }                         
+            }
+
+            model.AllWeatherAP.date = DateTime.Now;
         }
 
-        public  void LoadFile(string FileName)
+        public PlotModel PlotConst()
         {
-          
-          FileStream file = File.OpenRead(FileName);
-          model.LoadWeather(file);
-            
+            var x = 0;
+            var plotModel = new PlotModel { Title = $"{model.AllWeatherAP.visCross.address}" };
+            var series = new LineSeries();
+
+
+            CheckDate();
+
+            // Добавляем точки в серию данных
+            for (int i = 0; i < model.GrafConst.midTemp.Count; i++)
+            {
+                series.Points.Add(new DataPoint(DateTimeAxis.ToDouble(model.GrafConst.dates[i]), model.GrafConst.midTemp[i]));
+            }
+
+
+
+            // Устанавливаем подписи осей
+            plotModel.Axes.Add(new DateTimeAxis { Position = AxisPosition.Bottom, Title = "Дата" });
+            plotModel.Axes.Add(new LinearAxis { Position = AxisPosition.Left, Title = "Температура" });
+
+
+
+            plotModel.Series.Add(series);
+            return plotModel;
         }
-        public  void SaveFile(string FileName) 
+
+        private bool CheckDate()
         {
-            FileStream file= new FileStream(FileName, FileMode.OpenOrCreate)  ;
-            model.SaveWeather(file);
+            if (model.GrafConst.dates == null)
+            {
+                model.GrafConst.dates.Add(DateTime.Now.Date);
+                model.GrafConst.midTemp.Add(double.Parse(ReturnAverageTemp()));
+                return true;
+            } 
+            foreach ( DateTime? date in model.GrafConst.dates)
+            {
+                if (date ==  DateTime.Now.Date) 
+                return false;
+            }
+            model.GrafConst.dates.Add(DateTime.Now.Date);
+            model.GrafConst.midTemp.Add(double.Parse(ReturnAverageTemp()));
+            return true;
         }
-        public void SaveFileData(string FileName)
+
+    public void Save(int number,string FileName)
         {
-            FileStream file= new FileStream(FileName,FileMode.OpenOrCreate);
-            model.SaveWeatherData(file);
+            FileStream file = new FileStream(FileName, FileMode.OpenOrCreate);
+            switch (number)
+            {
+                case 0: model.Save(file,model.AllWeatherAP); break;
+                case 1: model.Save(file,model.GrafConst); break;
+            }
         }
+    public void Load(int number,string FileName)
+        {
+            FileStream file = File.OpenRead(FileName);
+            switch (number)
+            {
+                case 0: model.Load(file, model.AllWeatherAP); break;
+                case 1: model.Load(file, model.GrafConst); break;
+            }
+        }    
         public string? ReturnTempOpenWeather() 
         {
             if (model.AllWeatherAP.openWeather != null)
@@ -90,7 +149,7 @@ namespace WpfAppWther
                 return model.AllWeatherAP.visCross.address;
             return model.AllWeatherAP.NonInformationAboutLocation;
         }
-        public string? ReturnTempVissCrossWeather() 
+           public string? ReturnTempVissCrossWeather() 
         {
             if (model.AllWeatherAP.visCross != null)
                 return $"{Math.Round(Convert.ToDouble(model.AllWeatherAP.visCross.days[0].temp),2)}";

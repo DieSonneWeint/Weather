@@ -1,0 +1,53 @@
+{
+  "NonInformationAboutLocation": "Локация не найдена",
+  "openWeather": {
+    "main": {
+      "temp": 6.61
+    },
+    "name": "Novosibirsk",
+    "NonInformationAboutLocation": "Локация не найдена",
+    "openWeather": null,
+    "weatherstack": null,
+    "weatherapi": null,
+    "visCross": null
+  },
+  "weatherstack": {
+    "Location": {
+      "name": "Новосибирск"
+    },
+    "Current": {
+      "temperature": 7
+    },
+    "NonInformationAboutLocation": "Локация не найдена",
+    "openWeather": null,
+    "weatherstack": null,
+    "weatherapi": null,
+    "visCross": null
+  },
+  "weatherapi": {
+    "location": {
+      "name": "Новосибирск"
+    },
+    "current": {
+      "temp_c": 7
+    },
+    "NonInformationAboutLocation": "Локация не найдена",
+    "openWeather": null,
+    "weatherstack": null,
+    "weatherapi": null,
+    "visCross": null
+  },
+  "visCross": {
+    "address": "Новосибирск",
+    "days": [
+      {
+        "temp": 8
+      }
+    ],
+    "NonInformationAboutLocation": "Локация не найдена",
+    "openWeather": null,
+    "weatherstack": null,
+    "weatherapi": null,
+    "visCross": null
+  }
+}

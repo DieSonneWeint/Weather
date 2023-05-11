@@ -8,6 +8,8 @@ namespace WpfAppWther
 {
     public class AllWeatherAPI
     {
+        public DateTime date { get; set; }
+
         string nonInformationAboutLocation = "Локация не найдена";
         public string NonInformationAboutLocation { get { return nonInformationAboutLocation; } }
         public OpenWeather? openWeather { get; set; }

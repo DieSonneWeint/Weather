@@ -1,0 +1,15 @@
+{
+  "NonInformationAboutLocation": "Локация не найдена",
+  "openWeather": null,
+  "weatherstack": {
+    "Location": null,
+    "Current": null,
+    "NonInformationAboutLocation": "Локация не найдена",
+    "openWeather": null,
+    "weatherstack": null,
+    "weatherapi": null,
+    "visCross": null
+  },
+  "weatherapi": null,
+  "visCross": null
+}

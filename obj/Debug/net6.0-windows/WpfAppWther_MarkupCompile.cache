@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\drago\Source\Repos\Weather\obj\Debug\net6.0-windows\
+C:\Users\drago\source\repos\Weather\obj\Debug\net6.0-windows\
 WpfAppWther
 none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
-C:\Users\drago\Source\Repos\Weather\App.xaml
-1-157934321
+C:\Users\drago\source\repos\Weather\App.xaml
+2-1377982217
 
-111827546158
-194101785492
-WeatherApp.xaml;
+131255708982
+200667641872
+PlotView.xaml;WeatherApp.xaml;
 
 False
 

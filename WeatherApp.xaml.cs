@@ -37,7 +37,7 @@ namespace WpfAppWther
             TextBoxC.PreviewTextInput += new TextCompositionEventHandler(textBox_PreviewTextInput);
             if (File.Exists("WeatherTemp.json"))
             {
-                model.LoadFile("WeatherTemp.json");
+                model.Load(0,"WeatherTemp.json");
                 labelprint();
             }
         }
@@ -70,8 +70,8 @@ namespace WpfAppWther
                 }
                 await Task.Delay(3000);
                 labelprint();
-                model.SaveFile("WeatherTemp.json");
-                model.SaveFile($"SaveData\\{System.DateTime.Now.ToShortDateString()}_{model.ReturnCityNameOpenWeather()}.json");
+                model.Save(0,"WeatherTemp.json");
+                model.Save(0,$"SaveData\\{System.DateTime.Now.ToShortDateString()}_{model.ReturnCityNameOpenWeather()}.json");
                 TextBoxC.Text = "";
                 Button.IsEnabled = true;
             }
@@ -91,16 +91,35 @@ namespace WpfAppWther
         }
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
-            Button.IsEnabled= false;
+            ButtonLoad.IsEnabled= false;
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.InitialDirectory = @"SaveData\";
             openFileDialog.Filter = "json files (*.json)|*.json";
             if (openFileDialog.ShowDialog() == true)
             {
-                model.LoadFile(openFileDialog.FileName);
+                model.Load(0,openFileDialog.FileName);
             }
             labelprint();
-            Button.IsEnabled= true;
+            ButtonLoad.IsEnabled= true;
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            if ( model.ReturnAverageTemp() != "-")
+            {
+                GrafButton.IsEnabled = false;
+                if(File.Exists($"GraficsData\\{model.ReturnCityNameOpenWeather()}.json"))
+                  {model.Load(1,$"GraficsData\\{model.ReturnCityNameOpenWeather()}.json");}
+                Window window = new PlotView(model);
+                window.Closed += Window_Closed;
+                window.Show();
+            }
+        }
+
+        private void Window_Closed(object? sender, EventArgs e)
+        {
+            GrafButton.IsEnabled = true;
+            model.Save(1, $"GraficsData\\{model.ReturnCityNameOpenWeather()}.json");
         }
     }
 }

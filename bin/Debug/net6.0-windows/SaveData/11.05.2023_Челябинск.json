@@ -1,37 +1,40 @@
 {
+  "date": "2023-05-11T10:29:37.7652636+07:00",
   "NonInformationAboutLocation": "Локация не найдена",
-  "openWeather": null,
-  "weatherstack": {
-    "Location": null,
-    "Current": null,
+  "openWeather": {
+    "main": {
+      "temp": 8.05
+    },
+    "name": "Chelyabinsk",
+    "date": "0001-01-01T00:00:00",
     "NonInformationAboutLocation": "Локация не найдена",
     "openWeather": null,
     "weatherstack": null,
     "weatherapi": null,
     "visCross": null
   },
-  "weatherapi": null,
-  "visCross": {
-    "address": "Мосвка",
-    "days": [
-      {
-        "temp": 22.9
-      }
-    ],
+  "weatherstack": {
+    "Location": {
+      "name": "Челябинск"
+    },
+    "Current": {
+      "temperature": 8
+    },
+    "date": "0001-01-01T00:00:00",
     "NonInformationAboutLocation": "Локация не найдена",
     "openWeather": null,
     "weatherstack": null,
     "weatherapi": null,
     "visCross": null
-  }
-}
+  },
   "weatherapi": {
     "location": {
       "name": "Челябинск"
     },
     "current": {
-      "temp_c": 14
+      "temp_c": 8
     },
+    "date": "0001-01-01T00:00:00",
     "NonInformationAboutLocation": "Локация не найдена",
     "openWeather": null,
     "weatherstack": null,
@@ -42,9 +45,10 @@
     "address": "Челябинск",
     "days": [
       {
-        "temp": 6.4
+        "temp": 10.1
       }
     ],
+    "date": "0001-01-01T00:00:00",
     "NonInformationAboutLocation": "Локация не найдена",
     "openWeather": null,
     "weatherstack": null,

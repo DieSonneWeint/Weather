@@ -47,7 +47,8 @@
         <Label x:Name ="LabelWeatherApi" Content="" HorizontalAlignment="Left" Margin="515,59,0,0" VerticalAlignment="Top" Height="109" Width="196" FontSize="19" FontFamily="Bahnschrift SemiLight"/>
         <Label x:Name ="LabelWeatherStack" Content="" HorizontalAlignment="Left" Margin="731,57,0,0" VerticalAlignment="Top" Height="111" Width="194" FontFamily="Bahnschrift SemiLight" FontSize="19" Grid.ColumnSpan="3"/>
         <Label x:Name ="AverageTemp" Content="" HorizontalAlignment="Left" Margin="313,198,0,0" VerticalAlignment="Top" Height="91" Width="308" FontFamily="Bahnschrift SemiLight" FontSize="19"/>
-        <Button Content="Загрузить" HorizontalAlignment="Left" Margin="761,407,0,0" VerticalAlignment="Top" Height="76" Width="153" Click="Button_Click_2" FontFamily="Bahnschrift SemiLight" FontSize="18" Grid.ColumnSpan="2"/>
+        <Button Name= "ButtonLoad" Content="Загрузить" HorizontalAlignment="Left" Margin="763,411,0,0" VerticalAlignment="Top" Height="76" Width="153" Click="Button_Click_2" FontFamily="Bahnschrift SemiLight" FontSize="18" Grid.ColumnSpan="2"/>
         <Label Content="Введите название необходимой локации" Name="LabelEx" HorizontalAlignment="Left" Margin="297,307,0,0" VerticalAlignment="Top" Height="52" Width="340" FontSize="16" FontWeight="Bold"/>
+        <Button Name ="GrafButton" Content="График" HorizontalAlignment="Left" Margin="58,419,0,0" VerticalAlignment="Top" Height="69" Width="155" Click="Button_Click_1" FontFamily="Bahnschrift SemiLight" FontSize="18"/>
     </Grid>
 </Window>

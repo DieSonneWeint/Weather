@@ -1,0 +1,53 @@
+{
+  "NonInformationAboutLocation": "Локация не найдена",
+  "openWeather": {
+    "main": {
+      "temp": 12.81
+    },
+    "name": "Chelyabinsk",
+    "NonInformationAboutLocation": "Локация не найдена",
+    "openWeather": null,
+    "weatherstack": null,
+    "weatherapi": null,
+    "visCross": null
+  },
+  "weatherstack": {
+    "Location": {
+      "name": "Челябинск"
+    },
+    "Current": {
+      "temperature": 14
+    },
+    "NonInformationAboutLocation": "Локация не найдена",
+    "openWeather": null,
+    "weatherstack": null,
+    "weatherapi": null,
+    "visCross": null
+  },
+  "weatherapi": {
+    "location": {
+      "name": "Челябинск"
+    },
+    "current": {
+      "temp_c": 14
+    },
+    "NonInformationAboutLocation": "Локация не найдена",
+    "openWeather": null,
+    "weatherstack": null,
+    "weatherapi": null,
+    "visCross": null
+  },
+  "visCross": {
+    "address": "Челябинск",
+    "days": [
+      {
+        "temp": 7.4
+      }
+    ],
+    "NonInformationAboutLocation": "Локация не найдена",
+    "openWeather": null,
+    "weatherstack": null,
+    "weatherapi": null,
+    "visCross": null
+  }
+}

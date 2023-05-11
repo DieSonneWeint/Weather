@@ -12,6 +12,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="OxyPlot.Core" Version="2.1.2" />
+    <PackageReference Include="OxyPlot.Wpf" Version="2.1.2" />
+    <PackageReference Include="ScottPlot.WPF" Version="4.1.63" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Resource Include="Image2.png" />
   </ItemGroup>
 
