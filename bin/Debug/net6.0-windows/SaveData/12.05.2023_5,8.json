@@ -1,0 +1,57 @@
+{
+  "date": "2023-05-12T11:05:43.7035765+07:00",
+  "openWeather": {
+    "NonInformationAboutLocation": "Город не найден\nOW",
+    "main": {
+      "temp": 4.61
+    },
+    "name": "Novosibirsk",
+    "date": "0001-01-01T00:00:00",
+    "openWeather": null,
+    "weatherstack": null,
+    "weatherapi": null,
+    "visCross": null
+  },
+  "weatherstack": {
+    "NonInformationAboutLocation": "Город не найден\nWS",
+    "Location": {
+      "name": "Новосибирск"
+    },
+    "Current": {
+      "temperature": 5
+    },
+    "date": "0001-01-01T00:00:00",
+    "openWeather": null,
+    "weatherstack": null,
+    "weatherapi": null,
+    "visCross": null
+  },
+  "weatherapi": {
+    "NonInformationAboutLocation": "Город не найден\nWA",
+    "location": {
+      "name": "Новосибирск"
+    },
+    "current": {
+      "temp_c": 5
+    },
+    "date": "0001-01-01T00:00:00",
+    "openWeather": null,
+    "weatherstack": null,
+    "weatherapi": null,
+    "visCross": null
+  },
+  "visCross": {
+    "NonInformationAboutLocation": "Город не найден\nVCW",
+    "address": "Новосибирск",
+    "days": [
+      {
+        "temp": 5.8
+      }
+    ],
+    "date": "0001-01-01T00:00:00",
+    "openWeather": null,
+    "weatherstack": null,
+    "weatherapi": null,
+    "visCross": null
+  }
+}

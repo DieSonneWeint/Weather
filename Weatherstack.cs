@@ -10,9 +10,9 @@ namespace WpfAppWther
 {
     public class Weatherstack : AllWeatherAPI
     {
-        public string NonInformationAboutLocation { get { return $"{nonInformationAboutLocation}\nWS"; } }
-        public Locations? Location { get; set; }
-        public Currents? Current { get; set; }
+        public string NonInformationAboutLocation { get { return $"{nonInformationAboutLocation}\nWS"; } } // вывод информации о отсутствии города с инициалом API
+        public Locations? Location { get; set; } // название города 
+        public Currents? Current { get; set; } // температура 
 
     }
 

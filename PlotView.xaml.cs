@@ -25,7 +25,7 @@ namespace WpfAppWther
         {
            
             InitializeComponent();
-            plotView.Model = modelV.PlotConst();
+            plotView.Model = modelV.PlotConst(); // построение графика 
         }
     }
 }

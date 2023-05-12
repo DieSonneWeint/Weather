@@ -8,9 +8,9 @@ namespace WpfAppWther
 {
    public class WeatherApi : AllWeatherAPI
     {
-        public string NonInformationAboutLocation { get { return $"{nonInformationAboutLocation}\nWApi";} }
-        public Location? location { get; set; }
-        public Current? current { get; set; }
+        public string NonInformationAboutLocation { get { return $"{nonInformationAboutLocation}\nWA";} } // вывод информации о отсутствии города с инициалом API
+        public Location? location { get; set; } //  название города 
+        public Current? current { get; set; } // температура 
     } 
 
         public class Location

@@ -1,9 +1,11 @@
 {
-  "date": "2023-05-11T21:17:41.2322747+07:00",
+  "date": "2023-05-12T11:17:06.5156707+07:00",
   "openWeather": {
-    "NonInformationAboutLocation": "Нет информации о городе, OpenWeather",
-    "main": null,
-    "name": null,
+    "NonInformationAboutLocation": "Город не найден\nOW",
+    "main": {
+      "temp": 10.22
+    },
+    "name": "Moscow",
     "date": "0001-01-01T00:00:00",
     "openWeather": null,
     "weatherstack": null,
@@ -11,9 +13,13 @@
     "visCross": null
   },
   "weatherstack": {
-    "NonInformationAboutLocation": "Нет информации о городе, WeatherStack",
-    "Location": null,
-    "Current": null,
+    "NonInformationAboutLocation": "Город не найден\nWS",
+    "Location": {
+      "name": "Москва"
+    },
+    "Current": {
+      "temperature": 8
+    },
     "date": "0001-01-01T00:00:00",
     "openWeather": null,
     "weatherstack": null,
@@ -21,9 +27,13 @@
     "visCross": null
   },
   "weatherapi": {
-    "NonInformationAboutLocation": "Нет информации о городе, WeatherApi",
-    "location": null,
-    "current": null,
+    "NonInformationAboutLocation": "Город не найден\nWA",
+    "location": {
+      "name": "Москва"
+    },
+    "current": {
+      "temp_c": 9
+    },
     "date": "0001-01-01T00:00:00",
     "openWeather": null,
     "weatherstack": null,
@@ -31,11 +41,11 @@
     "visCross": null
   },
   "visCross": {
-    "NonInformationAboutLocation": "Нет информации о городе, VisCrossWeather",
-    "address": "h",
+    "NonInformationAboutLocation": "Город не найден\nVCW",
+    "address": "Москва",
     "days": [
       {
-        "temp": 13.5
+        "temp": 14.9
       }
     ],
     "date": "0001-01-01T00:00:00",

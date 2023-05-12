@@ -70,8 +70,11 @@ namespace WpfAppWther
                 }
                 await Task.Delay(3000);
                 labelprint();
-                model.Save(0,"WeatherTemp.json");
-                model.Save(0,$"SaveData\\{System.DateTime.Now.ToShortDateString()}_{model.ReturnCityNameOpenWeather()}.json");
+                if (model.ReturnAverageTemp() != "-")
+                {
+                    model.Save(0, "WeatherTemp.json");
+                    model.Save(0, $"SaveData\\{System.DateTime.Now.ToShortDateString()}_{model.ReturnCityNameVissCross()}.json");
+                }
                 TextBoxC.Text = "";
                 Button.IsEnabled = true;
             }
@@ -93,7 +96,7 @@ namespace WpfAppWther
         {
             ButtonLoad.IsEnabled= false;
             OpenFileDialog openFileDialog = new OpenFileDialog();
-            openFileDialog.InitialDirectory = @"SaveData\";
+            openFileDialog.InitialDirectory = @"Weather\bin\Debug\net6.0-windows\SaveData\\";
             openFileDialog.Filter = "json files (*.json)|*.json";
             if (openFileDialog.ShowDialog() == true)
             {
@@ -108,8 +111,8 @@ namespace WpfAppWther
             if ( model.ReturnAverageTemp() != "-")
             {
                 GrafButton.IsEnabled = false;
-                if(File.Exists($"GraficsData\\{model.ReturnCityNameOpenWeather()}.json"))
-                  {model.Load(1,$"GraficsData\\{model.ReturnCityNameOpenWeather()}.json");}
+                if(File.Exists($"GraficsData\\{model.ReturnCityNameVissCross()}.json"))
+                  {model.Load(1,$"GraficsData\\{model.ReturnCityNameVissCross()}.json");}
                 Window window = new PlotView(model);
                 window.Closed += Window_Closed;
                 window.Show();
@@ -119,7 +122,7 @@ namespace WpfAppWther
         private void Window_Closed(object? sender, EventArgs e)
         {
             GrafButton.IsEnabled = true;
-            model.Save(1, $"GraficsData\\{model.ReturnCityNameOpenWeather()}.json");
+            model.Save(1, $"GraficsData\\{model.ReturnCityNameVissCross()}.json");
         }
     }
 }

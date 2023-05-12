@@ -8,11 +8,11 @@ namespace WpfAppWther
 {
     public class AllWeatherAPI
     {
-        public DateTime date { get; set; }
+        public DateTime date { get; set; } // дата 
 
-        public string nonInformationAboutLocation = "Город не найден";
+        public string nonInformationAboutLocation = "Город не найден"; 
 
-        public OpenWeather? openWeather { get; set; }
+        public OpenWeather? openWeather { get; set; } 
         public Weatherstack? weatherstack { get; set; } 
         public WeatherApi? weatherapi { get; set; } 
         public VisCrossWeather? visCross { get; set; } 

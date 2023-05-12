@@ -106,16 +106,24 @@ namespace WpfAppWther
         {
             if (model.GrafConst.dates == null)
             {
-                model.GrafConst.dates.Add(DateTime.Now.Date);
+                model.GrafConst.dates.Add(model.AllWeatherAP.date);
                 model.GrafConst.midTemp.Add(double.Parse(ReturnAverageTemp()));
                 return true;
-            } 
+            }
+            int i = 0;
             foreach ( DateTime? date in model.GrafConst.dates)
             {
-                if (date ==  DateTime.Now.Date) 
+                if (date ==  model.AllWeatherAP.date) 
                 return false;
+                if (date > model.AllWeatherAP.date)
+                {
+                    model.GrafConst.dates.Insert(i, model.AllWeatherAP.date);
+                    model.GrafConst.midTemp.Insert(i, double.Parse(ReturnAverageTemp()));
+                    return true;
+                }
+
             }
-            model.GrafConst.dates.Add(DateTime.Now.Date);
+            model.GrafConst.dates.Add(model.AllWeatherAP.date);
             model.GrafConst.midTemp.Add(double.Parse(ReturnAverageTemp()));
             return true;
         }
@@ -130,7 +138,7 @@ namespace WpfAppWther
             }
         }
     
-    private bool CheckCity()
+    private bool CheckCity() // проверка на наличие города 
         {
             if (model.AllWeatherAP.openWeather.name == null || model.AllWeatherAP.visCross.address == null || model.AllWeatherAP.weatherapi.location == null || model.AllWeatherAP.weatherstack.Location == null)
                     return false;
