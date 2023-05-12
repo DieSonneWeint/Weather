@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -8,8 +10,10 @@ namespace WpfAppWther
 {
     public class Weatherstack : AllWeatherAPI
     {
+        public string NonInformationAboutLocation { get { return $"{nonInformationAboutLocation}\nWS"; } }
         public Locations? Location { get; set; }
         public Currents? Current { get; set; }
+
     }
 
 
@@ -20,7 +24,7 @@ namespace WpfAppWther
 
     public class Currents
     {
-        public int? temperature { get; set; }
+        public int? temperature { get; set; } 
     }
 
 }

@@ -30,21 +30,22 @@ namespace WpfAppWther
 {
     public class ModelV
     {
-        Model model = new Model();
+        Model model = new Model(); 
         HttpClient client = new HttpClient();
 
         string API = "d3b601a5292fe7374e161205cf54ca0f";
         string API2 = "E8PDDNGUQTG972373HU9DKM4U";
         string API3 = "9267ce2ca31d4d50861102445232401";
         string URI, URI2, URI3, URI4;
-        private void CreateURI(string CityName)
+
+        private void CreateURI(string CityName) // создание Uri
         {
             URI = $"https://api.openweathermap.org/data/2.5/weather?q={CityName}&appid=d3b601a5292fe7374e161205cf54ca0f&units=metric";
             URI2 = $"https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/{CityName}/today?unitGroup=metric&key=E8PDDNGUQTG972373HU9DKM4U&contentType=json";
             URI3 = $"http://api.weatherapi.com/v1/current.json?key=9267ce2ca31d4d50861102445232401&q={CityName}&aqi=no";
             URI4 = $"http://api.weatherstack.com/current?access_key=3d339b07eb46691e2bdb4b0e056d4cb8&query={CityName}";
         }
-        public async void ResponseMessage(string CityName)
+        public async void ResponseMessage(string CityName) // Сбор данных Api
         {
             model = new Model();
             CreateURI(CityName);
@@ -74,7 +75,7 @@ namespace WpfAppWther
             model.AllWeatherAP.date = DateTime.Now;
         }
 
-        public PlotModel PlotConst()
+        public PlotModel PlotConst() // функция для построения графиков 
         {
             var x = 0;
             var plotModel = new PlotModel { Title = $"{model.AllWeatherAP.visCross.address}" };
@@ -101,7 +102,7 @@ namespace WpfAppWther
             return plotModel;
         }
 
-        private bool CheckDate()
+        private bool CheckDate() // проверка для значений графика 
         {
             if (model.GrafConst.dates == null)
             {
@@ -119,7 +120,7 @@ namespace WpfAppWther
             return true;
         }
 
-    public void Save(int number,string FileName)
+    public void Save(int number,string FileName) // сохранение
         {
             FileStream file = new FileStream(FileName, FileMode.OpenOrCreate);
             switch (number)
@@ -128,7 +129,15 @@ namespace WpfAppWther
                 case 1: model.Save(file,model.GrafConst); break;
             }
         }
-    public void Load(int number,string FileName)
+    
+    private bool CheckCity()
+        {
+            if (model.AllWeatherAP.openWeather.name == null || model.AllWeatherAP.visCross.address == null || model.AllWeatherAP.weatherapi.location == null || model.AllWeatherAP.weatherstack.Location == null)
+                    return false;
+            return true;
+        }
+
+    public void Load(int number,string FileName)// загрузка
         {
             FileStream file = File.OpenRead(FileName);
             switch (number)
@@ -137,55 +146,54 @@ namespace WpfAppWther
                 case 1: model.Load(file, model.GrafConst); break;
             }
         }    
-        public string? ReturnTempOpenWeather() 
+        public string? ReturnTempOpenWeather() // возвращает значение температуры OpenWeather 
         {
-            if (model.AllWeatherAP.openWeather != null)
+            if (CheckCity())
              return $"{Math.Round(Convert.ToDouble(model.AllWeatherAP.openWeather.main.temp),2)}";
             return "-";
         }
-        public string? ReturnCityNameOpenWeather() 
+        public string? ReturnCityNameOpenWeather() // возвращает название города OpenWeather
         {
-            if (model.AllWeatherAP.visCross != null)
-                return model.AllWeatherAP.visCross.address;
-            return model.AllWeatherAP.NonInformationAboutLocation;
+            if (CheckCity())
+                return model.AllWeatherAP.openWeather.name;
+            return model.AllWeatherAP.openWeather.NonInformationAboutLocation;
         }
-           public string? ReturnTempVissCrossWeather() 
+        public string? ReturnTempVissCrossWeather() // возвращает температуру VissCrossWeather
         {
-            if (model.AllWeatherAP.visCross != null)
+            if (CheckCity())
                 return $"{Math.Round(Convert.ToDouble(model.AllWeatherAP.visCross.days[0].temp),2)}";
             return "-";
         }
-        public string? ReturnCityNameVissCross() 
+        public string? ReturnCityNameVissCross() // возвращает название города VissCrossWeather
         {
-            if (model.AllWeatherAP.visCross != null)
+            if (CheckCity())
                 return model.AllWeatherAP.visCross.address;
-            return model.AllWeatherAP.NonInformationAboutLocation;
+            return model.AllWeatherAP.visCross.NonInformationAboutLocation;
         }
-        public string? ReturnTempWeatherApi()
+        public string? ReturnTempWeatherApi() // возвращает название температуры WeatherApi
         {
-            if (model.AllWeatherAP.weatherapi != null)
+            if (CheckCity())
                 return $"{Math.Round(Convert.ToDouble(model.AllWeatherAP.weatherapi.current.temp_c),2)}";
             return "-";
         }
-        public string? ReturnCityNameWeatherApi() 
+        public string? ReturnCityNameWeatherApi() // возвращает название города WeatherApi
         {
-            if (model.AllWeatherAP.weatherapi != null)
+            if (CheckCity())
                 return model.AllWeatherAP.weatherapi.location.name;
-            return model.AllWeatherAP.NonInformationAboutLocation;
+            return model.AllWeatherAP.weatherapi.NonInformationAboutLocation;
         }
-        public string? ReturnTempWeatherStack() 
+        public string? ReturnTempWeatherStack() // возвращает  температуры WeatherStack
         {
-            if (model.AllWeatherAP.weatherstack != null)
+            if (CheckCity())
                 if(model.AllWeatherAP.weatherstack.Current != null)
                 return $"{Math.Round(Convert.ToDouble(model.AllWeatherAP.weatherstack.Current.temperature),2)}";
             return "-";
         }
-        public string? ReturnCityNameWeatherStack() 
+        public string? ReturnCityNameWeatherStack() // возвращает название города WeatherStack
         {
-            if (model.AllWeatherAP.weatherstack != null)
-                if (model.AllWeatherAP.weatherstack.Location != null)
+           if (CheckCity())
                 return model.AllWeatherAP.weatherstack.Location.name;
-            return model.AllWeatherAP.NonInformationAboutLocation;
+            return model.AllWeatherAP.weatherstack.NonInformationAboutLocation;
         }
 
         public string ReturnAverageTemp() // подсчет средней температуры

@@ -8,7 +8,7 @@ namespace WpfAppWther
 {
    public class WeatherApi : AllWeatherAPI
     {
-
+        public string NonInformationAboutLocation { get { return $"{nonInformationAboutLocation}\nWApi";} }
         public Location? location { get; set; }
         public Current? current { get; set; }
     } 

@@ -12,8 +12,6 @@ namespace WpfAppWther
     [Serializable]
     public class GrafConst
     {
-        public string? Name { get; set; }
-
         public List<double>? midTemp { get; set; }
   
         public List<DateTime>? dates { get; set; }

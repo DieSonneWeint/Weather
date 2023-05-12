@@ -44,7 +44,7 @@
             </Label.RenderTransform>
         </Label>
         <Label x:Name ="LabelVisualCros"  Content="" HorizontalAlignment="Left" Margin="283,57,0,0" VerticalAlignment="Top" Height="114" Width="194" FontSize="19" FontFamily="Bahnschrift SemiLight" RenderTransformOrigin="2.856,5.06"/>
-        <Label x:Name ="LabelWeatherApi" Content="" HorizontalAlignment="Left" Margin="515,59,0,0" VerticalAlignment="Top" Height="109" Width="196" FontSize="19" FontFamily="Bahnschrift SemiLight"/>
+        <Label x:Name ="LabelWeatherApi" Content="" HorizontalAlignment="Left" Margin="515,59,0,0" VerticalAlignment="Top" Height="114" Width="198" FontSize="19" FontFamily="Bahnschrift SemiLight"/>
         <Label x:Name ="LabelWeatherStack" Content="" HorizontalAlignment="Left" Margin="731,57,0,0" VerticalAlignment="Top" Height="111" Width="194" FontFamily="Bahnschrift SemiLight" FontSize="19" Grid.ColumnSpan="3"/>
         <Label x:Name ="AverageTemp" Content="" HorizontalAlignment="Left" Margin="313,198,0,0" VerticalAlignment="Top" Height="91" Width="308" FontFamily="Bahnschrift SemiLight" FontSize="19"/>
         <Button Name= "ButtonLoad" Content="Загрузить" HorizontalAlignment="Left" Margin="763,411,0,0" VerticalAlignment="Top" Height="76" Width="153" Click="Button_Click_2" FontFamily="Bahnschrift SemiLight" FontSize="18" Grid.ColumnSpan="2"/>

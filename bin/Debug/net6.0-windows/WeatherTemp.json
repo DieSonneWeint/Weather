@@ -1,0 +1,43 @@
+{
+  "date": "2023-05-11T21:34:29.4997997+07:00",
+  "openWeather": {
+    "NonInformationAboutLocation": "Нет информации о городе\n,OpenWeather",
+    "main": null,
+    "name": null,
+    "date": "0001-01-01T00:00:00",
+    "openWeather": null,
+    "weatherstack": null,
+    "weatherapi": null,
+    "visCross": null
+  },
+  "weatherstack": {
+    "NonInformationAboutLocation": "Нет информации о городе\n,WeatherStack",
+    "Location": null,
+    "Current": null,
+    "date": "0001-01-01T00:00:00",
+    "openWeather": null,
+    "weatherstack": null,
+    "weatherapi": null,
+    "visCross": null
+  },
+  "weatherapi": {
+    "NonInformationAboutLocation": "Нет информации о городе\n,WeatherApi",
+    "location": null,
+    "current": null,
+    "date": "0001-01-01T00:00:00",
+    "openWeather": null,
+    "weatherstack": null,
+    "weatherapi": null,
+    "visCross": null
+  },
+  "visCross": {
+    "NonInformationAboutLocation": "Нет информации о городе\n, VisCrossWeather",
+    "address": null,
+    "days": null,
+    "date": "0001-01-01T00:00:00",
+    "openWeather": null,
+    "weatherstack": null,
+    "weatherapi": null,
+    "visCross": null
+  }
+}
