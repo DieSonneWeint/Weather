@@ -1,7 +1,6 @@
 ﻿using Microsoft.Win32;
 using OxyPlot.Series;
 using OxyPlot;
-using ScottPlot.Plottable;
 using System;
 using System.Collections.Generic;
 using System.Drawing;

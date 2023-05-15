@@ -10,7 +10,6 @@
 //------------------------------------------------------------------------------
 
 using OxyPlot.Wpf;
-using ScottPlot;
 using System;
 using System.Diagnostics;
 using System.Windows;

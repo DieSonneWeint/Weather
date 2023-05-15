@@ -105,12 +105,9 @@ C:\Users\drago\Source\Repos\Weather\obj\Debug\net6.0-windows\WpfAppWther.genrunt
 C:\Users\drago\Source\Repos\Weather\obj\Debug\net6.0-windows\ref\WpfAppWther.dll
 C:\Users\drago\Source\Repos\Weather\bin\Debug\net6.0-windows\Image1.png
 C:\Users\drago\Source\Repos\Weather\bin\Debug\net6.0-windows\Image3.png
-C:\Users\drago\source\repos\Weather\bin\Debug\net6.0-windows\ScottPlot.dll
-C:\Users\drago\source\repos\Weather\bin\Debug\net6.0-windows\ScottPlot.WPF.dll
 C:\Users\drago\source\repos\Weather\obj\Debug\net6.0-windows\WpfAppWther.csproj.CopyComplete
 C:\Users\drago\source\repos\Weather\bin\Debug\net6.0-windows\OxyPlot.dll
 C:\Users\drago\source\repos\Weather\bin\Debug\net6.0-windows\OxyPlot.Wpf.dll
 C:\Users\drago\source\repos\Weather\bin\Debug\net6.0-windows\OxyPlot.Wpf.Shared.dll
 C:\Users\drago\source\repos\Weather\obj\Debug\net6.0-windows\PlotView.g.cs
-C:\Users\drago\source\repos\Weather\obj\Debug\net6.0-windows\GeneratedInternalTypeHelper.g.cs
 C:\Users\drago\source\repos\Weather\obj\Debug\net6.0-windows\PlotView.baml
