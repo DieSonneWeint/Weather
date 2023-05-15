@@ -10,7 +10,6 @@
 //------------------------------------------------------------------------------
 
 using OxyPlot.Wpf;
-using ScottPlot;
 using System;
 using System.Diagnostics;
 using System.Windows;
@@ -63,7 +62,7 @@ namespace WpfAppWther {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/WpfAppWther;component/plotview.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/WpfAppWther;V1.0.0.0;component/plotview.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\PlotView.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

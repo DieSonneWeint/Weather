@@ -9,7 +9,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-using ScottPlot;
 using System;
 using System.Diagnostics;
 using System.Windows;
@@ -134,7 +133,7 @@ namespace WpfAppWther {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/WpfAppWther;component/weatherapp.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/WpfAppWther;V1.0.0.0;component/weatherapp.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\WeatherApp.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

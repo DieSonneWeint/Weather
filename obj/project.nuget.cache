@@ -1,18 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "5uknLkqP7PxQugt3dy8b5d0tlvXnzuNj2xXtSXKBjyLuSh3acxVTvh9lg6Vk9ZRsCxDtgXgZL/8mLe5J2XMG3g==",
+  "dgSpecHash": "m5OVWrO+l25GQSWz86fVDMcQAVj6m3j8I6oQseTDwbDRjFKZHeaTE5fzTJ9RHwGdnifhOtC8qe6s5m9KHmJxQA==",
   "success": true,
   "projectFilePath": "C:\\Users\\drago\\source\\repos\\Weather\\WpfAppWther.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\drago\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.4\\microsoft.netcore.platforms.3.1.4.nupkg.sha512",
-    "C:\\Users\\drago\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
     "C:\\Users\\drago\\.nuget\\packages\\oxyplot.core\\2.1.2\\oxyplot.core.2.1.2.nupkg.sha512",
     "C:\\Users\\drago\\.nuget\\packages\\oxyplot.wpf\\2.1.2\\oxyplot.wpf.2.1.2.nupkg.sha512",
-    "C:\\Users\\drago\\.nuget\\packages\\oxyplot.wpf.shared\\2.1.2\\oxyplot.wpf.shared.2.1.2.nupkg.sha512",
-    "C:\\Users\\drago\\.nuget\\packages\\scottplot\\4.1.63\\scottplot.4.1.63.nupkg.sha512",
-    "C:\\Users\\drago\\.nuget\\packages\\scottplot.wpf\\4.1.63\\scottplot.wpf.4.1.63.nupkg.sha512",
-    "C:\\Users\\drago\\.nuget\\packages\\system.drawing.common\\4.7.2\\system.drawing.common.4.7.2.nupkg.sha512",
-    "C:\\Users\\drago\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512"
+    "C:\\Users\\drago\\.nuget\\packages\\oxyplot.wpf.shared\\2.1.2\\oxyplot.wpf.shared.2.1.2.nupkg.sha512"
   ],
   "logs": []
 }

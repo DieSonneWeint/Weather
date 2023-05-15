@@ -14,7 +14,6 @@
     <SourceRoot Include="C:\Program Files (x86)\Microsoft Visual Studio\Shared\NuGetPackages\" />
   </ItemGroup>
   <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
-    <PkgScottPlot_WPF Condition=" '$(PkgScottPlot_WPF)' == '' ">C:\Users\drago\.nuget\packages\scottplot.wpf\4.1.63</PkgScottPlot_WPF>
     <PkgOxyPlot_Wpf Condition=" '$(PkgOxyPlot_Wpf)' == '' ">C:\Users\drago\.nuget\packages\oxyplot.wpf\2.1.2</PkgOxyPlot_Wpf>
   </PropertyGroup>
 </Project>
